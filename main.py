@@ -16,4 +16,4 @@ m.update(password.encode())
 print("< hash-type : " + hashtype + " >")
 print(m.hexdigest())
 
-123123print (m.digest_size)
+123123print (m.digest_size)sadsad
