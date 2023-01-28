@@ -2,6 +2,9 @@ from rich.console import Console
 from rich.table import Table
 from rich.progress import track
 import time
+import subprocess
+
+bashCommand = "python3 script.py"
 
 table = Table(title="Info Table")
 table.add_column("[blue underline]Realeased", style="cyan")
@@ -15,7 +18,7 @@ console = Console()
 
 menu_options = {
     1: 'Print Table',
-    2: 'Option 2',
+    2: 'Run Script',
     3: 'Option 3',
     4: 'Exit',
 }
@@ -28,7 +31,8 @@ def option1():
      console.print(table)
 
 def option2():
-     print('Handle option \'Option 2\'')
+    process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
+    output, error = process.communicate()
 
 def option3():
      print('Handle option \'Option 3\'')
