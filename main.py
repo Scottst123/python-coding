@@ -15,3 +15,5 @@ m.update(password.encode())
 
 print("< hash-type : " + hashtype + " >")
 print(m.hexdigest())
+
+print('test')
